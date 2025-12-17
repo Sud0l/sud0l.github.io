@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Models — ShadowWolf Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse all ShadowWolf Labs 3D models." />
+
+  <link rel="icon" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.png" />
+
+  <style>
+    body { margin:0; font-family:system-ui, sans-serif; background:#0b0f14; color:#e8eef6; }
+    .wrap { max-width:900px; margin:auto; padding:48px 20px; }
+
+    .topbar { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+    .topbar a { color:#9bb0c7; text-decoration:none; }
+    .topbar a:hover { text-decoration:underline; }
+
+    .brand { display:flex; align-items:center; gap:14px; }
+    .brand a { display:inline-flex; align-items:center; }
+    .logo { width:64px; height:auto; filter:drop-shadow(0 6px 16px rgba(0,0,0,0.35)); }
+    h1 { margin:0; font-size:34px; }
+
+    p { color:#c9d6e6; line-height:1.6; }
+
+    .grid { margin-top:18px; display:grid; gap:18px; }
+
+    .model {
+      padding:18px;
+      border:1px solid #1d2a3a;
+      border-radius:14px;
+      background:#0e1524;
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:18px;
+    }
+
+    .model img {
+      width:100%;
+      border-radius:10px;
+      background:#0b0f14;
+      display:block;
+      object-fit:cover;
+    }
+
+    .btn {
+      display:inline-block;
+      margin-top:12px;
+      padding:12px 18px;
+      background:#2b6fff;
+      color:#fff;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:600;
+    }
+
+    footer { margin-top:40px; font-size:13px; color:#9bb0c7; }
+
+    @media (max-width:700px){
+      .model { grid-template-columns:1fr; }
+      .logo { width:56px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <a href="index.html">← Back to home</a>
+    </div>
+
+    <div class="brand">
+      <a href="index.html" title="Back to home">
+        <img src="logo.png" alt="ShadowWolf Labs logo" class="logo">
+      </a>
+      <h1>Models</h1>
+    </div>
+
+    <p>Browse all available designs from ShadowWolf Labs.</p>
+
+    <div class="grid">
+
+      <!-- MODEL CARD 1 -->
+      <div class="model">
+        <img src="models/tablet-mount-preview.png" alt="Tablet Mount preview">
+
+        <div>
+          <h2 style="margin:0; font-size:22px;">Tablet Mount (2-Part)</h2>
+          <p style="margin:10px 0 0;">
+            Modular tablet mount for desks and workstations. Designed as a two-part print
+            for strength and easy assembly.
+          </p>
+
+          <!-- Redirect to model detail page -->
+          <a class="btn" href="models/tablet-mount.html">View model →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      © 2025 ShadowWolf Labs
+    </footer>
+  </div>
+</body>
+</html>
