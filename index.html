@@ -5,32 +5,107 @@
   <title>ShadowWolf Labs — Where idea meets the maker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Curated 3D models for makers. Practical prints, clean files, free downloads.">
-  <style>
-    .logo {
-  width: 96px;
-  height: auto;
-  margin-bottom: 14px;
-  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
-}
 
-    body { margin:0; font-family:system-ui, sans-serif; background:#0b0f14; color:#e8eef6; }
-    .wrap { max-width:900px; margin:auto; padding:48px 20px; }
-    .card { background:#111826; border:1px solid #1d2a3a; border-radius:16px; padding:28px; }
-    h1 { font-size:42px; margin:0 0 10px; }
-    h2 { margin-top:30px; font-size:22px; }
-    p, li { color:#c9d6e6; line-height:1.6; }
-    .btn { display:inline-block; margin-top:18px; padding:12px 18px;
-           background:#2b6fff; color:#fff; text-decoration:none; border-radius:12px; font-weight:600; }
-    .tag { display:inline-block; padding:6px 10px; margin:8px 6px 0 0;
-           border:1px solid #2a3b52; border-radius:999px; font-size:13px; }
-    footer { margin-top:40px; font-size:13px; color:#9bb0c7; }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #0b0f14;
+      color: #e8eef6;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: auto;
+      padding: 48px 20px;
+    }
+
+    .card {
+      background: #111826;
+      border: 1px solid #1d2a3a;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 96px;
+      height: auto;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+    p, li {
+      color: #c9d6e6;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 18px;
+      background: #2b6fff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 8px 6px 0 0;
+      border: 1px solid #2a3b52;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #9bb0c7;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      .logo {
+        width: 72px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="card">
-      <img src="logo.png" alt="ShadowWolf Labs logo" class="logo">
-      <h1>ShadowWolf Labs</h1>
+
+      <div class="brand">
+        <img src="logo.png" alt="ShadowWolf Labs logo" class="logo">
+        <h1>ShadowWolf Labs</h1>
+      </div>
+
       <p><strong>Where idea meets the maker.</strong></p>
 
       <p>
@@ -63,6 +138,7 @@
         © 2025 ShadowWolf Labs — Independent digital design studio.<br>
         All designs © ShadowWolf Labs.
       </footer>
+
     </div>
   </div>
 </body>
