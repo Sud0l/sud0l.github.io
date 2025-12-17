@@ -1,24 +1,125 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Admin — ShadowWolf Labs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin:0;
+      font-family:system-ui, sans-serif;
+      background:#0b0f14;
+      color:#e8eef6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    .card {
+      background:#111826;
+      border:1px solid #1d2a3a;
+      border-radius:16px;
+      padding:28px;
+      max-width:420px;
+      width:100%;
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
+    }
+
+    h1 { margin:0 0 10px; }
+    p { color:#c9d6e6; }
+
+    input {
+      width:100%;
+      padding:12px;
+      margin-top:12px;
+      border-radius:10px;
+      border:1px solid #2a3b52;
+      background:#0b0f14;
+      color:#e8eef6;
+      font-size:15px;
+    }
+
+    button {
+      margin-top:14px;
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:none;
+      background:#2b6fff;
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .admin {
+      display:none;
+    }
+
+    .links a {
+      display:block;
+      margin:10px 0;
+      color:#9bb0c7;
+      text-decoration:none;
+    }
+
+    .links a:hover {
+      text-decoration:underline;
+    }
+
+    .error {
+      color:#ff6b6b;
+      margin-top:10px;
+      display:none;
+    }
+  </style>
 </head>
-<body style="font-family:system-ui;background:#0b0f14;color:#e8eef6;padding:40px;">
-  <h1>Admin</h1>
-  <p>This page is not linked anywhere.</p>
 
-  <h2>Quick links</h2>
-  <ul>
-    <li><a href="/models/" style="color:#9bb0c7;">Models page</a></li>
-    <li><a href="https://cloud.umami.is" style="color:#9bb0c7;">Analytics (Umami)</a></li>
-    <li><a href="https://github.com/Sud0l/sud0l.github.io" style="color:#9bb0c7;">GitHub repo</a></li>
-  </ul>
+<body>
 
-  <p style="color:#9bb0c7;margin-top:30px;">
-    Note: GitHub Pages is static — this page is “hidden” only by not linking it.
-  </p>
+<div class="card" id="login">
+  <h1>Admin login</h1>
+  <p>ShadowWolf Labs — restricted access</p>
+
+  <input type="password" id="password" placeholder="Enter password" />
+  <button onclick="login()">Login</button>
+
+  <div class="error" id="error">Wrong password</div>
+</div>
+
+<div class="card admin" id="admin">
+  <h1>Admin panel</h1>
+  <p>Welcome. Keep this page private.</p>
+
+  <div class="links">
+    <a href="https://cloud.umami.is" target="_blank">📊 Analytics (Umami)</a>
+    <a href="https://github.com/Sud0l/sud0l.github.io" target="_blank">🗂 GitHub Repository</a>
+    <a href="../models.html">📦 View models page</a>
+    <a href="../index.html">🏠 Back to homepage</a>
+  </div>
+</div>
+
+<script>
+  const PASSWORD = "CHANGE_THIS_PASSWORD";
+
+  function login() {
+    const input = document.getElementById("password").value;
+    if (input === PASSWORD) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("admin").style.display = "block";
+      sessionStorage.setItem("admin", "true");
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  }
+
+  // Keep logged in during session
+  if (sessionStorage.getItem("admin") === "true") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("admin").style.display = "block";
+  }
+</script>
+
 </body>
 </html>
