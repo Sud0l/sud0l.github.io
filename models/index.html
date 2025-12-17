@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Models — ShadowWolf Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/favicon.png" />
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js"
+          data-website-id="364a80d7-5e6f-4aba-a607-63c4745155cb"></script>
+
+  <style>
+    body { margin:0; font-family:system-ui, sans-serif; background:#0b0f14; color:#e8eef6; }
+    .wrap { max-width:900px; margin:auto; padding:48px 20px; }
+
+    .header { display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+    .logo { width:64px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.35)); }
+
+    h1 { margin:0; font-size:34px; }
+    p { color:#c9d6e6; line-height:1.6; }
+
+    .model-card {
+      display:flex; gap:18px;
+      background:#111826; border:1px solid #1d2a3a;
+      border-radius:16px; padding:18px; margin:18px 0;
+    }
+
+    .model-card img {
+      width:160px; height:120px; object-fit:cover;
+      border-radius:12px; background:#0b0f14;
+    }
+
+    .btn {
+      display:inline-block; padding:12px 18px;
+      background:#2b6fff; color:#fff;
+      text-decoration:none; border-radius:12px;
+      font-weight:600;
+    }
+
+    @media (max-width:600px){
+      .model-card { flex-direction:column; }
+      .model-card img { width:100%; height:auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="header">
+      <a href="/">
+        <img src="/logo.png" class="logo" alt="ShadowWolf Labs logo">
+      </a>
+      <div>
+        <h1>Models</h1>
+        <p>Browse all available designs from ShadowWolf Labs.</p>
+      </div>
+    </div>
+
+    <!-- MODEL CARD TEMPLATE (copy for new models)
+    <div class="model-card">
+      <img src="preview.png" alt="Preview">
+      <div>
+        <h3>Model name</h3>
+        <p>Short description.</p>
+        <a class="btn" href="model-page.html">View model →</a>
+      </div>
+    </div>
+    -->
+
+    <div class="model-card">
+      <img src="tablet-mount-preview.png" alt="Tablet Mount preview">
+      <div>
+        <h3>Tablet Mount (2-Part)</h3>
+        <p>Modular tablet mount for desks and workstations.</p>
+        <a class="btn" href="tablet-mount.html">View model →</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
 
