@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Curated 3D models for makers. Practical prints, clean files, free downloads." />
 
-  <link rel="icon" href="favicon.png" />
-  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="icon" href="/favicon.png" />
+
+  <!-- Umami Analytics (PRIVATE) -->
+  <script defer src="https://cloud.umami.is/script.js"
+          data-website-id="364a80d7-5e6f-4aba-a607-63c4745155cb"></script>
 
   <style>
     body { margin:0; font-family:system-ui, sans-serif; background:#0b0f14; color:#e8eef6; }
@@ -16,14 +19,15 @@
 
     .brand { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
     .brand a { display:inline-flex; align-items:center; }
-    .logo { width:88px; height:auto; filter:drop-shadow(0 6px 16px rgba(0,0,0,0.35)); }
+    .logo { width:88px; filter:drop-shadow(0 6px 16px rgba(0,0,0,.35)); }
 
     h1 { font-size:42px; margin:0; }
     h2 { margin-top:34px; font-size:22px; }
     p, li { color:#c9d6e6; line-height:1.6; }
 
     .btn { display:inline-block; margin-top:16px; padding:12px 18px;
-      background:#2b6fff; color:#fff; text-decoration:none; border-radius:12px; font-weight:600; }
+      background:#2b6fff; color:#fff; text-decoration:none;
+      border-radius:12px; font-weight:600; }
 
     .tag { display:inline-block; padding:6px 10px; margin:8px 6px 0 0;
       border:1px solid #2a3b52; border-radius:999px; font-size:13px; }
@@ -42,9 +46,8 @@
     <div class="card">
 
       <div class="brand">
-        <!-- Clicking the logo always returns home -->
-        <a href="index.html" title="Back to home">
-          <img src="logo.png" alt="ShadowWolf Labs logo" class="logo">
+        <a href="/" title="Home">
+          <img src="/logo.png" alt="ShadowWolf Labs logo" class="logo">
         </a>
         <h1>ShadowWolf Labs</h1>
       </div>
@@ -56,8 +59,7 @@
         Clean STL files, useful designs, and free access supported by ads.
       </p>
 
-      <!-- Redirect to the models page -->
-      <a class="btn" href="models.html">Browse models →</a>
+      <a class="btn" href="/models/">Browse models →</a>
 
       <div>
         <span class="tag">3D Printing</span>
@@ -67,17 +69,8 @@
         <span class="tag">Tools</span>
       </div>
 
-      <h2>What you’ll find</h2>
-      <ul>
-        <li>Practical 3D models for real-world use</li>
-        <li>Electronics mounts, cases, adapters</li>
-        <li>Clean, printable STL files</li>
-        <li>Free downloads with ad support</li>
-      </ul>
-
       <footer>
-        © 2025 ShadowWolf Labs — Independent digital design studio.<br>
-        All designs © ShadowWolf Labs.
+        © 2025 ShadowWolf Labs — Independent digital design studio.
       </footer>
 
     </div>
