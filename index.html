@@ -1,170 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>ShadowWolf Labs — Where idea meets the maker</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curated 3D models for makers. Practical prints, clean files, free downloads.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Curated 3D models for makers. Practical prints, clean files, free downloads." />
 
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="favicon.png" />
+  <link rel="shortcut icon" href="favicon.png" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: #0b0f14;
-      color: #e8eef6;
-    }
+    body { margin:0; font-family:system-ui, sans-serif; background:#0b0f14; color:#e8eef6; }
+    .wrap { max-width:900px; margin:auto; padding:48px 20px; }
+    .card { background:#111826; border:1px solid #1d2a3a; border-radius:16px; padding:28px; }
 
-    .wrap {
-      max-width: 900px;
-      margin: auto;
-      padding: 48px 20px;
-    }
+    .brand { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
+    .brand a { display:inline-flex; align-items:center; }
+    .logo { width:88px; height:auto; filter:drop-shadow(0 6px 16px rgba(0,0,0,0.35)); }
 
-    .card {
-      background: #111826;
-      border: 1px solid #1d2a3a;
-      border-radius: 16px;
-      padding: 28px;
-    }
+    h1 { font-size:42px; margin:0; }
+    h2 { margin-top:34px; font-size:22px; }
+    p, li { color:#c9d6e6; line-height:1.6; }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
+    .btn { display:inline-block; margin-top:16px; padding:12px 18px;
+      background:#2b6fff; color:#fff; text-decoration:none; border-radius:12px; font-weight:600; }
 
-    .logo {
-      width: 80px;
-      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
-    }
+    .tag { display:inline-block; padding:6px 10px; margin:8px 6px 0 0;
+      border:1px solid #2a3b52; border-radius:999px; font-size:13px; }
 
-    h1 {
-      font-size: 40px;
-      margin: 0;
-    }
+    footer { margin-top:40px; font-size:13px; color:#9bb0c7; }
 
-    h2 {
-      margin-top: 36px;
-      font-size: 22px;
-    }
-
-    p, li {
-      color: #c9d6e6;
-      line-height: 1.6;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 12px 18px;
-      background: #2b6fff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 6px 10px;
-      margin: 8px 6px 0 0;
-      border: 1px solid #2a3b52;
-      border-radius: 999px;
-      font-size: 13px;
-    }
-
-    /* MODEL GRID */
-    .model {
-      margin-top: 22px;
-      padding: 18px;
-      border: 1px solid #1d2a3a;
-      border-radius: 14px;
-      background: #0e1524;
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 18px;
-    }
-
-    .model img {
-      width: 100%;
-      border-radius: 10px;
-      background: #0b0f14;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #9bb0c7;
-    }
-
-    @media (max-width: 700px) {
-      .model {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width:600px){
+      .logo { width:72px; }
+      h1 { font-size:34px; }
     }
   </style>
 </head>
 
 <body>
-<div class="wrap">
-  <div class="card">
+  <div class="wrap">
+    <div class="card">
 
-    <div class="brand">
-      <img src="logo.png" class="logo" alt="ShadowWolf Labs logo">
-      <h1>ShadowWolf Labs</h1>
-    </div>
+      <div class="brand">
+        <!-- Clicking the logo always returns home -->
+        <a href="index.html" title="Back to home">
+          <img src="logo.png" alt="ShadowWolf Labs logo" class="logo">
+        </a>
+        <h1>ShadowWolf Labs</h1>
+      </div>
 
-    <p><strong>Where idea meets the maker.</strong></p>
+      <p><strong>Where idea meets the maker.</strong></p>
 
-    <p>
-      Independent digital design studio focused on practical 3D models for makers.
-      Clean STL files, useful designs, and free access supported by ads.
-    </p>
+      <p>
+        Independent digital design studio focused on practical 3D models for makers.
+        Clean STL files, useful designs, and free access supported by ads.
+      </p>
 
-    <div>
-      <span class="tag">3D Printing</span>
-      <span class="tag">STL</span>
-      <span class="tag">Enclosures</span>
-      <span class="tag">Mounts</span>
-      <span class="tag">Tools</span>
-    </div>
-
-    <h2 id="models">Models</h2>
-
-    <!-- MODEL CARD -->
-    <div class="model">
-      <img src="models/tablet-mount-preview.png" alt="Tablet Mount preview">
+      <!-- Redirect to the models page -->
+      <a class="btn" href="models.html">Browse models →</a>
 
       <div>
-        <h3>Tablet Mount (2-Part)</h3>
-        <p>
-          Modular tablet mount for desks and workstations.
-          Designed as a two-part print for strength and easy assembly.
-        </p>
-
-        <a class="btn" href="models/tablet-mount.html">
-          View model →
-        </a>
+        <span class="tag">3D Printing</span>
+        <span class="tag">STL</span>
+        <span class="tag">Enclosures</span>
+        <span class="tag">Mounts</span>
+        <span class="tag">Tools</span>
       </div>
+
+      <h2>What you’ll find</h2>
+      <ul>
+        <li>Practical 3D models for real-world use</li>
+        <li>Electronics mounts, cases, adapters</li>
+        <li>Clean, printable STL files</li>
+        <li>Free downloads with ad support</li>
+      </ul>
+
+      <footer>
+        © 2025 ShadowWolf Labs — Independent digital design studio.<br>
+        All designs © ShadowWolf Labs.
+      </footer>
+
     </div>
-
-    <h2>What you’ll find</h2>
-    <ul>
-      <li>Practical 3D models for real-world use</li>
-      <li>Electronics mounts, cases, adapters</li>
-      <li>Clean, printable STL files</li>
-      <li>Free downloads with ad support</li>
-    </ul>
-
-    <footer>
-      © 2025 ShadowWolf Labs — Independent digital design studio.<br>
-      All designs © ShadowWolf Labs.
-    </footer>
-
   </div>
-</div>
 </body>
 </html>
