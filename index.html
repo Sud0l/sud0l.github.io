@@ -31,7 +31,7 @@
       padding: 28px;
     }
 
-    /* Brand header */
+    /* Brand */
     .brand {
       display: flex;
       align-items: center;
@@ -51,8 +51,12 @@
     }
 
     h2 {
-      margin-top: 30px;
+      margin-top: 34px;
       font-size: 22px;
+    }
+
+    h3 {
+      margin: 0 0 6px;
     }
 
     p, li {
@@ -62,7 +66,7 @@
 
     .btn {
       display: inline-block;
-      margin-top: 18px;
+      margin-top: 14px;
       padding: 12px 18px;
       background: #2b6fff;
       color: #fff;
@@ -80,13 +84,22 @@
       font-size: 13px;
     }
 
+    /* Model cards */
+    .model {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid #1d2a3a;
+      border-radius: 12px;
+      background: #0e1524;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 13px;
       color: #9bb0c7;
     }
 
-    /* Mobile tweaks */
+    /* Mobile */
     @media (max-width: 600px) {
       .logo {
         width: 72px;
@@ -115,7 +128,7 @@
         Clean STL files, useful designs, and free access supported by ads.
       </p>
 
-      <a class="btn" href="#models">Browse models (coming soon)</a>
+      <a class="btn" href="#models">Browse models</a>
 
       <div>
         <span class="tag">3D Printing</span>
@@ -125,8 +138,35 @@
         <span class="tag">Tools</span>
       </div>
 
+      <!-- MODELS -->
       <h2 id="models">Models</h2>
-      <p>First models dropping soon.</p>
+
+      <div class="model">
+        <h3>Tablet Mount (2-Part)</h3>
+
+        <p>
+          Modular tablet mount designed for desk and workstation setups.
+          This design consists of two printable parts that assemble into
+          a stable mounting solution.
+        </p>
+
+        <a class="btn"
+           href="https://raw.githubusercontent.com/Sud0l/sud0l.github.io/ecef7f6c82a0e551cbfdfeee830f62ebaeac3622/models/Tablet_mount_part1.stl"
+           download>
+          Download STL — Part 1
+        </a>
+
+        <a class="btn"
+           style="margin-left:10px;"
+           href="https://raw.githubusercontent.com/Sud0l/sud0l.github.io/ecef7f6c82a0e551cbfdfeee830f62ebaeac3622/models/Tablet_mount_part2.stl"
+           download>
+          Download STL — Part 2
+        </a>
+
+        <p style="font-size:12px;color:#9bb0c7; margin-top:10px;">
+          © ShadowWolf Labs — personal use only
+        </p>
+      </div>
 
       <h2>What you’ll find</h2>
       <ul>
